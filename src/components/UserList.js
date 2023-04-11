@@ -29,9 +29,9 @@ export default function UserList() {
   const updateData = (id) => {
     const docToUpdate = doc(database, "users", id);
     updateDoc(docToUpdate, {
-      firstName: "ahmad",
-      lastName: "ben",
-      email: "ahmed@gmail.com",
+      firstName: "john",
+      lastName: "cena",
+      email: "john@gmail.com",
       password: "123456",
     })
       .then(() => {

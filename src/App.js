@@ -4,6 +4,7 @@ import Navbar from "./components/Nav";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import UserList from "./components/UserList";
+import Cv from "./pages/Cv";
 export default function App() {
   return (
     <>
@@ -20,6 +21,7 @@ export default function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/cv" element={<Cv />} />
       </Routes>
     </>
   );
