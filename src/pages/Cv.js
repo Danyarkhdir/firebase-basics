@@ -10,7 +10,12 @@ export default function Cv() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const storageRef = ref(storage, selectedFile.name);
+    const storageRef = ref(
+      storage,
+      selectedFile.name.endsWith(".pdf")
+        ? "pdfs/" + selectedFile.name
+        : "images/" + selectedFile.name
+    );
     const uploadTask = uploadBytesResumable(storageRef, selectedFile);
     uploadTask.on(
       "state_changed",
